@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :manage_features, only: [:index]
-  resources :products, only: [:index]
+  resources :products, only: [:index, :show]
   resources :home_slides, only: [:index]
   resources :coupons, only: [] do
     collection do

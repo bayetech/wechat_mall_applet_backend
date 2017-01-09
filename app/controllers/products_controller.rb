@@ -31,4 +31,10 @@ class ProductsController < BaseController
 
     render json: @products
   end
+
+  def show
+    products = Product.includes(:description_of_detail).includes(:images).on_sale.common.is_search.enabled
+    @product = products.find(params[:id])
+    render json: @product
+  end
 end
