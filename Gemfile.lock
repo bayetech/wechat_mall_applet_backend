@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 5b20f0390bee76b61d26c7ad2b352c4c11830a19
+  revision: ef1d7e9acebe7d1b9d3d3d390315bbb4bc7f0676
   branch: master
   specs:
     baye-core (0.0.3)
@@ -50,10 +50,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_model_serializers (0.10.3)
+    active_model_serializers (0.10.4)
       actionpack (>= 4.1, < 6)
       activemodel (>= 4.1, < 6)
-      jsonapi (= 0.1.1.beta2)
+      case_transform (>= 0.2)
+      jsonapi (= 0.1.1.beta6)
     activejob (5.0.1)
       activesupport (= 5.0.1)
       globalid (>= 0.3.6)
@@ -122,6 +123,8 @@ GEM
     carrierwave-aliyun (0.8.1)
       aliyun-oss-sdk (>= 0.1.6)
       carrierwave (>= 0.5.7)
+    case_transform (0.2)
+      activesupport
     coderay (1.1.1)
     concurrent-ruby (1.0.4)
     connection_pool (2.2.1)
@@ -145,9 +148,11 @@ GEM
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    json (1.8.3)
-    jsonapi (0.1.1.beta2)
-      json (~> 1.8)
+    jsonapi (0.1.1.beta6)
+      jsonapi-parser (= 0.1.1.beta3)
+      jsonapi-renderer (= 0.1.1.beta1)
+    jsonapi-parser (0.1.1.beta3)
+    jsonapi-renderer (0.1.1.beta1)
     kakurenbo-puti (0.5.0)
       activerecord (>= 4.1.0)
     listen (3.0.8)
@@ -168,7 +173,7 @@ GEM
     mysql2 (0.4.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.0.0)
+    net-ssh (4.0.1)
     netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
