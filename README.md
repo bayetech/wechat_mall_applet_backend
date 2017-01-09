@@ -1,5 +1,7 @@
 # README
 
+This Rails project is a backend reference source for [wechat mall applet](https://github.com/bayetech/wechat_mall_applet), it need baye internal db to running, so normally, you can not running in your dev env, but only can reference.
+
 # To generate swagger docs
 
 ```bash
