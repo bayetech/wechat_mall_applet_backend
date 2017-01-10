@@ -87,22 +87,22 @@ class SessionsController < BaseController
 
   def cached_wx_session_key(code)
     key = "wxcode_#{code}"
-    sessions = $redis.hgetall(key)
+    sessions = $redis.get(key)
     if sessions.blank?
       raise 'dev 环境无法执行接下来的代码了，请用 stage' if Rails.env.development?
       sessions = wx_get_session_key(code)
 
-      $redis.hset(key, sessions)
+      $redis.set(key, sessions)
       $redis.expire(key, 3600 * 24 * 7)
     end
-    sessions
+    JSON.load(sessions)
   end
 
   def wx_get_session_key(code)
     uri = URI('https://api.weixin.qq.com/sns/jscode2session')
     params = { appid: ENV['weapplet_app_id'], secret: ENV['weapplet_secret'], js_code: code, grant_type: 'authorization_code' }
     uri.query = URI.encode_www_form(params)
-    JSON.load(Net::HTTP.get_response(uri).body)
+    Net::HTTP.get_response(uri).body
   end
 
   def decrypt(session_key)
