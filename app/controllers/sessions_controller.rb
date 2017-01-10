@@ -1,10 +1,17 @@
 require "#{Rails.root}/lib/wxbiz_data_crypt"
 
 class SessionsController < BaseController
+  # 打开应用时就获取用户敏感信息
+  # 这里不返回 @token, @customer 的 id 更新也是 nil
+  def wechat_user_type
+    wechat_user = update_wechat_user_token
+    render json: { wechat_user_type: 'normal' }
+  end
+
   def login
-    @mobile      = params[:mobile]
-    @token       = request.headers['Authorization']
-    @customer    = nil
+    @mobile   = params[:mobile]
+    @token    = request.headers['Authorization']
+    @customer = nil
 
     if token_valid?
       token_login
@@ -62,18 +69,33 @@ class SessionsController < BaseController
     @customer = Customer.find(current_wechat_user.customer_id)
   end
 
+  # params[:code], @customer, @token
   def update_wechat_user_token
     @token = 'wx_' + SecureRandom.hex(20)
-    body = wx_get_session_key(params[:code]) unless Rails.env.development?
+    body = cached_wx_session_key(params[:code])
 
     wechat_user = WechatUser.where(open_id: body['openid']).where(app_id: ENV['weapplet_app_id']).first || WechatUser.new
     wechat_user.update_token(body, @customer, @token, params[:code])
     wechat_user.update_info(decrypt(body['session_key']))
+    wechat_user
   end
 
   def token_valid?
     return false if @token.blank?
     current_wechat_user
+  end
+
+  def cached_wx_session_key(code)
+    key = "wxcode_#{code}"
+    sessions = $redis.hgetall(key)
+    if sessions.blank?
+      raise 'dev 环境无法执行接下来的代码了，请用 stage' if Rails.env.development?
+      sessions = wx_get_session_key(code)
+
+      $redis.hset(key, sessions)
+      $redis.expire(key, 3600 * 24 * 7)
+    end
+    sessions
   end
 
   def wx_get_session_key(code)

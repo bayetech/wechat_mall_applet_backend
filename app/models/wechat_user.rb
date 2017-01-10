@@ -37,12 +37,12 @@ class WechatUser < ActiveRecord::Base
 
   def update_token(body, customer, token, wx_code)
     self.session_key  = body['session_key']
-    self.customer_id  = customer.id
+    self.customer_id  = customer&.id
     self.expired_at   = 7.days.from_now
     self.client_token = token
     self.wx_code      = wx_code
-    self.app_id     ||= ENV['weapplet_app_id']
-    self.open_id    ||= body['openid']
+    self.app_id       = ENV['weapplet_app_id']
+    self.open_id      = body['openid']
     save!
   end
 
@@ -53,7 +53,7 @@ class WechatUser < ActiveRecord::Base
     self.city      = user_info['city']
     self.province  = user_info['province']
     self.avatar    = user_info['avatarUrl']
-    self.union_open_id ||= user_info['unionId']
+    self.union_open_id = user_info['unionId']
     save
   end
 end

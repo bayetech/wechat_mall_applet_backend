@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [] do
     collection do
+      post :wechat_user_type
       post :login
       post :logout
       get :get_mobile_passcode
