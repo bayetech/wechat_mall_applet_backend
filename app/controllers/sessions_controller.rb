@@ -8,6 +8,7 @@ class SessionsController < BaseController
     return render json: { wechat_user_type: 'normal' }
 
   rescue DevDomainError, NoAppIdError => e
+    Rails.logger.info "appdev=======#{e.message},  #{params}"
     return render json: { wechat_user_type: 'normal' }
   end
 
