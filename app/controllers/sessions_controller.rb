@@ -5,7 +5,10 @@ class SessionsController < BaseController
   # 这里不返回 @token, @customer 的 id 更新也是 nil
   def wechat_user_type
     wechat_user = update_wechat_user_token
-    render json: { wechat_user_type: 'normal' }
+    return render json: { wechat_user_type: 'normal' }
+
+  rescue DevDomainError, NoAppIdError => e
+    return render json: { wechat_user_type: 'normal' }
   end
 
   def login
