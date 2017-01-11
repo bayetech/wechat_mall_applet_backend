@@ -27,7 +27,11 @@ class SessionsController < BaseController
         mobilecode_login
         return render status: 403, json: {code: 5, msg: '手机验证码不正确！'} if @customer.nil?
       end
-      update_wechat_user_token
+      begin
+        update_wechat_user_token
+      rescue DevDomainError, NoAppIdError => e
+        return render status: 403, json: { code: 9, msg: e.message }
+      end
     end
     render json: { token: @token, customer: @customer.slice(:name, :mobile, :baye_rank, :id, :account_type) }
   end
@@ -89,13 +93,17 @@ class SessionsController < BaseController
     key = "wxcode_#{code}"
     sessions = $redis.get(key)
     if sessions.blank?
-      raise 'dev 环境无法执行接下来的代码了，请用 stage' if Rails.env.development?
+      raise DevDomainError if Rails.env.development?
       sessions = wx_get_session_key(code)
 
       $redis.set(key, sessions)
       $redis.expire(key, 3600 * 6)
+    else
+      Rails.logger.debug "=== session key read from redis: #{sessions}"
     end
-    JSON.load(sessions)
+    hash_session = JSON.load(sessions)
+    raise NoAppIdError if hash_session['errcode'] == 41002
+    hash_session
   end
 
   def wx_get_session_key(code)
@@ -112,5 +120,20 @@ class SessionsController < BaseController
 
     pc = WXBizDataCrypt.new(app_id, session_key)
     pc.decrypt(encrypted_data, iv)
+  end
+end
+
+
+class NoAppIdError < StandardError
+  attr_reader :message
+  def initialize(message = nil)
+    @message = message || "由于没有添加AppId，微信的登录无法实现，所以登录功能不能正常运行。"
+  end
+end
+
+class DevDomainError < StandardError
+  attr_reader :message
+  def initialize(message = nil)
+    @message = message || "本地的 RAPI 没有域名，无法获取向微信获取 session key"
   end
 end
