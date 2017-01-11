@@ -93,7 +93,7 @@ class SessionsController < BaseController
       sessions = wx_get_session_key(code)
 
       $redis.set(key, sessions)
-      $redis.expire(key, 3600 * 24 * 7)
+      $redis.expire(key, 3600 * 6)
     end
     JSON.load(sessions)
   end
