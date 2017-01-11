@@ -90,6 +90,7 @@ class SessionsController < BaseController
   end
 
   def cached_wx_session_key(code)
+    raise NoAppIdError if code == "the code is a mock one"
     key = "wxcode_#{code}"
     sessions = $redis.get(key)
     if sessions.blank?
@@ -101,9 +102,7 @@ class SessionsController < BaseController
     else
       Rails.logger.debug "=== session key read from redis: #{sessions}"
     end
-    hash_session = JSON.load(sessions)
-    raise NoAppIdError if hash_session['errcode'] == 41002
-    hash_session
+    JSON.load(sessions)
   end
 
   def wx_get_session_key(code)
@@ -127,7 +126,7 @@ end
 class NoAppIdError < StandardError
   attr_reader :message
   def initialize(message = nil)
-    @message = message || "由于没有添加AppId，微信的登录无法实现，所以登录功能不能正常运行。"
+    @message = message || "由于没有添加AppId，微信的登录无法实现，所以不能登录。"
   end
 end
 
