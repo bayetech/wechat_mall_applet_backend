@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 09a6cbb96bb9052c779037dbcf235fe3d5b21615
+  revision: 7126f7e60fcfdc60a600198679d1471130e881bb
   branch: master
   specs:
     baye-core (0.0.3)
@@ -12,7 +12,7 @@ GIT
       kakurenbo-puti (~> 0.5.0)
       mini_magick (~> 4.6.0)
       paper_trail (~> 6.0.2)
-      sidekiq (~> 4.2.7)
+      sidekiq (~> 4.2.8)
       state_machines-activemodel (~> 0.4.0)
       state_machines-activerecord (~> 0.4.0)
 
