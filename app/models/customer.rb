@@ -1,4 +1,4 @@
-class Customer < ActiveRecord::Base
+class Customer < ApplicationRecord
   include Baye::Uid
   include Baye::No
   include Baye::CustomerConcern
@@ -23,11 +23,6 @@ class Customer < ActiveRecord::Base
   has_many :payments, class_name: Baye::Payment
   has_many :wechat_users
   has_many :coupons, class_name: Baye::Coupon
-  has_many :distribution_salers, foreign_key: :distributor_customer_id, class_name: Baye::DistributionSaler
-  has_many :distribution_member_customers, through: :distribution_salers
-
-  has_one :distributor, class_name: Baye::DistributionSaler, foreign_key: :distribution_member_customer_id
-  has_one :distributor_customer, through: :distributor
 
   before_create :set_customer_account_type, :set_badge_value, :set_nickname, :set_reference_code, :set_agent_value
 

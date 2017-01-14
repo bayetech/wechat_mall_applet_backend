@@ -1,4 +1,4 @@
-class WechatUser < ActiveRecord::Base
+class WechatUser < ApplicationRecord
   belongs_to :customer
   validates :open_id, presence: true, uniqueness: true
 

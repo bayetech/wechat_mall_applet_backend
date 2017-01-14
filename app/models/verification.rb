@@ -1,4 +1,4 @@
-class Verification < ActiveRecord::Base
+class Verification < ApplicationRecord
   validates :mobile, presence: true, format: { with: /\A1[3-9][0-9]\d{8}\z/ }
   validates :expire_at, presence: true
   validates :code, presence: true

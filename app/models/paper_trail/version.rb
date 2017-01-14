@@ -1,5 +1,5 @@
 module PaperTrail
-  class Version < ActiveRecord::Base
+  class Version < ApplicationRecord
     include PaperTrail::VersionConcern
     establish_connection :baye_trail_versions
   end
