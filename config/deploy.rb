@@ -29,7 +29,7 @@ set :puma_config_file, 'config/puma-web.rb'
 
 # Default value for :linked_files is []
 append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/redis.yml',
-                      'config/application.yml', 'config/sidekiq.yml'
+                      'config/application.yml', 'config/sidekiq.yml', 'config/wechat.yml'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/swagger_doc'
