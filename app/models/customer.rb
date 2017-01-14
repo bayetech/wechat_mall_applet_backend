@@ -1,4 +1,4 @@
-class Customer < ActiveRecord::Base
+class Customer < ApplicationRecord
   include Baye::Uid
   include Baye::No
   include Baye::CustomerConcern

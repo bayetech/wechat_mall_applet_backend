@@ -1,4 +1,4 @@
-class Order < ActiveRecord::Base
+class Order < ApplicationRecord
   attr_accessor :invoice_title, :inner_info, :outer_info
   include Baye::Uid
   include Baye::No
