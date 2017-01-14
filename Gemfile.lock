@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: ad0a81ee521707a4e3aaf7809cfe19c618be1638
+  revision: 3b97e05e22f5a710b3e8d0e8868b853f9eda2049
   branch: master
   specs:
     baye-core (0.0.3)
@@ -23,6 +23,16 @@ GIT
   specs:
     cl2009 (0.2.0)
       redis (~> 3.2)
+
+GIT
+  remote: https://github.com/Eric-Guo/wechat.git
+  revision: 9430eb0b441b3fb5326357a7259ed122a6cc2bfb
+  specs:
+    wechat (0.8.4)
+      activesupport (>= 3.2, < 5.1.x)
+      http (>= 1.0.4, < 3)
+      nokogiri (>= 1.6.0)
+      thor
 
 GEM
   remote: https://gems.ruby-china.org/
@@ -143,8 +153,15 @@ GEM
       activesupport (>= 4.1.0)
     gyoku (1.3.1)
       builder (>= 2.1.2)
+    http (2.1.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (1.0.1)
+    http_parser.rb (0.6.0)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
@@ -309,6 +326,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   swagger-docs
   tzinfo-data
+  wechat!
   wx_pay
 
 BUNDLED WITH
