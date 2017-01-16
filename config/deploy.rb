@@ -32,7 +32,7 @@ append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/redis
                       'config/application.yml', 'config/sidekiq.yml', 'config/wechat.yml'
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/swagger_doc'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/swagger_doc', 'public/page_qr_codes'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
