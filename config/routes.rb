@@ -45,4 +45,9 @@ Rails.application.routes.draw do
       get :districts
     end
   end
+  resources :product_qr_codes, only: [] do
+    collection do
+      get :image
+    end
+  end
 end
