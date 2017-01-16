@@ -7,7 +7,7 @@ class ProductQrCodesController < BaseController
     file_path = Rails.root.join('public', 'page_qr_codes', file_name)
     IO.binwrite(file_path, file.read)
 
-    url = request.base_url + '/public/page_qr_codes/' + file_name
+    url = request.base_url + '/page_qr_codes/' + file_name
     return render json: { url: url }
   end
 
