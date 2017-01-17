@@ -21,7 +21,7 @@ module LandlordRapi
     # Rails 5
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins ['http://localhost:3000', 'https://swagger-ui.bayekeji.com/']
+        origins ['http://localhost:3000', 'https://swagger-ui.bayekeji.com']
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
