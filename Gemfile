@@ -28,7 +28,8 @@ gem 'redis', '~> 3.3.1'
 gem 'bcrypt', '~> 3.1.11'
 gem 'wx_pay'
 
-gem 'wechat', git: 'https://github.com/Eric-Guo/wechat.git'
+# $ bundle config --local local.wechat /Users/guochunzhong/git/oss/wechat
+gem 'wechat', git: 'git@source.bayekeji.com:backend/wechat.git', branch: :master
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors', require: 'rack/cors'

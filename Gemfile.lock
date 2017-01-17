@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 3b97e05e22f5a710b3e8d0e8868b853f9eda2049
+  revision: f7284c7acbc35e3ff05fff92ffc7399abfa14874
   branch: master
   specs:
     baye-core (0.0.3)
@@ -25,8 +25,9 @@ GIT
       redis (~> 3.2)
 
 GIT
-  remote: https://github.com/Eric-Guo/wechat.git
+  remote: git@source.bayekeji.com:backend/wechat.git
   revision: 9430eb0b441b3fb5326357a7259ed122a6cc2bfb
+  branch: master
   specs:
     wechat (0.8.4)
       activesupport (>= 3.2, < 5.1.x)
