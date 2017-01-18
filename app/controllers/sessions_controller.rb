@@ -81,7 +81,6 @@ class SessionsController < BaseController
   def update_wechat_user_token
     @token = 'wx_' + SecureRandom.hex(20)
     body = cached_wx_session_key(params[:code])
-    Rails.logger.info "body: #{body}"
 
     wechat_user = WechatUser.where(open_id: body['openid']).where(app_id: ENV['weapplet_app_id']).first || WechatUser.new
     wechat_user.update_token(body, @customer, @token, params[:code])
@@ -115,7 +114,7 @@ class SessionsController < BaseController
     params = { appid: ENV['weapplet_app_id'], secret: ENV['weapplet_secret'], js_code: code, grant_type: 'authorization_code' }
     uri.query = URI.encode_www_form(params)
     resp = Net::HTTP.get_response(uri)
-    if resp.is_a?(Net::HTTPSuccess)
+    if resp.is_a?(Net::HTTPSuccess) && !resp.body["errcode"]
       return resp.body
     else
       raise("wx 请求没有 Success #{resp&.body}")
