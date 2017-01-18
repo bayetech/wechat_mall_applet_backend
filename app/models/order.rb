@@ -46,7 +46,7 @@ class Order < ApplicationRecord
 
   def free_coin_pay_amount
     return 0 if order_items.size.zero?
-    order_items.inject(0) { |acc, elem| acc + (elem.distributed_free_coin_pay_amount.present? ? 0 : elem.distributed_free_coin_pay_amount.to_f) }
+    order_items.inject(0) { |acc, elem| acc + (elem.distributed_free_coin_pay_amount.present? ? elem.distributed_free_coin_pay_amount.to_f : 0) }
   end
 
   private
