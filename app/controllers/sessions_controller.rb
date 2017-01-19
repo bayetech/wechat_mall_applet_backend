@@ -80,11 +80,16 @@ class SessionsController < BaseController
   def update_wechat_user_token
     @token = 'wx_' + SecureRandom.hex(20)
     body = cached_wx_session_key(params[:code])
+    sensitive_data = decrypt(body['session_key'])
 
-    wechat_user = WechatUser.where(open_id: body['openid']).where(app_id: ENV['weapplet_app_id']).first || WechatUser.new
+    wechat_user = find_exist_wechat_user(sensitive_data) || WechatUser.new
     wechat_user.update_token(body, @customer, @token, params[:code])
-    wechat_user.update_info(decrypt(body['session_key']))
+    wechat_user.update_info(sensitive_data)
     wechat_user
+  end
+
+  def find_exist_wechat_user(data)
+    WechatUser.find_by(union_open_id: data['unionId'])
   end
 
   def token_valid?
