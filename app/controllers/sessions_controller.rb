@@ -1,10 +1,11 @@
-require "#{Rails.root}/lib/wxbiz_data_crypt"
+# frozen_string_literal: true
+require Rails.root.join('lib', 'wxbiz_data_crypt')
 
 class SessionsController < BaseController
   # 打开应用时就获取用户敏感信息
   # 这里不返回 @token, @customer 的 id 更新也是 nil
   def wechat_user_type
-    wechat_user = update_wechat_user_token
+    update_wechat_user_token
     return render json: { wechat_user_type: 'normal' }
 
   rescue DevDomainError, NoAppIdError => e
@@ -19,17 +20,17 @@ class SessionsController < BaseController
 
     if token_valid?
       token_login
-      return render status: 403, json: {code: 7, msg: 'token登录出错'} if @customer.nil?
+      return render status: 403, json: { code: 7, msg: 'token登录出错' } if @customer.nil?
     else
-      return render status: 403, json: {code: 4, msg: '需要填写手机号码'} if @mobile.blank?
+      return render status: 403, json: { code: 4, msg: '需要填写手机号码' } if @mobile.blank?
 
       case login_type
       when :password
         password_login
-        return render status: 403, json: {code: 6, msg: '密码不正确或该账号没有绑定'} if @customer.nil?
+        return render status: 403, json: { code: 6, msg: '密码不正确或该账号没有绑定' } if @customer.nil?
       when :mobile_code
         mobilecode_login
-        return render status: 403, json: {code: 5, msg: '手机验证码不正确！'} if @customer.nil?
+        return render status: 403, json: { code: 5, msg: '手机验证码不正确！' } if @customer.nil?
       end
       begin
         update_wechat_user_token
@@ -41,15 +42,13 @@ class SessionsController < BaseController
   end
 
   def logout
-    # TODO code not used
+    # TODO: code not used
     # 但 code 每次 token 登录也会变
     param_code = params[:code]
-    if current_wechat_user
-      current_wechat_user.expire!
-      return render status: 200
-    else
-      return render status: 500
-    end
+    return render status: 500 unless current_wechat_user
+
+    current_wechat_user.expire!
+    render status: 200
   end
 
   private
@@ -65,9 +64,9 @@ class SessionsController < BaseController
   end
 
   def mobilecode_login
-    return nil if !Verification.validate?(@mobile, params[:mobile_code])
+    return nil unless Verification.validate?(@mobile, params[:mobile_code])
     @customer = Customer.find_by(mobile: @mobile)
-    @customer = Customer.new.register!({mobile: @mobile, name: params[:name]}) unless @customer
+    @customer = Customer.new.register!(mobile: @mobile, name: params[:name]) unless @customer
   end
 
   def token_login
@@ -94,7 +93,7 @@ class SessionsController < BaseController
   end
 
   def cached_wx_session_key(code)
-    raise NoAppIdError if code == "the code is a mock one"
+    raise NoAppIdError if code == 'the code is a mock one'
     key = "wxcode_#{code}"
     sessions = $redis.get(key)
     if sessions.blank?
@@ -106,7 +105,7 @@ class SessionsController < BaseController
     else
       Rails.logger.debug "=== session key read from redis: #{sessions}"
     end
-    JSON.load(sessions)
+    JSON.parse(sessions)
   end
 
   def wx_get_session_key(code)
@@ -114,7 +113,7 @@ class SessionsController < BaseController
     params = { appid: ENV['weapplet_app_id'], secret: ENV['weapplet_secret'], js_code: code, grant_type: 'authorization_code' }
     uri.query = URI.encode_www_form(params)
     resp = Net::HTTP.get_response(uri)
-    if resp.is_a?(Net::HTTPSuccess) && !resp.body["errcode"]
+    if resp.is_a?(Net::HTTPSuccess) && !resp.body['errcode']
       return resp.body
     else
       raise("wx 请求没有 Success #{resp&.body}")
@@ -131,17 +130,16 @@ class SessionsController < BaseController
   end
 end
 
-
 class NoAppIdError < StandardError
   attr_reader :message
   def initialize(message = nil)
-    @message = message || "由于没有添加AppId，微信的登录无法实现，所以不能登录。"
+    @message = message || '由于没有添加AppId，微信的登录无法实现，所以不能登录。'
   end
 end
 
 class DevDomainError < StandardError
   attr_reader :message
   def initialize(message = nil)
-    @message = message || "本地的 RAPI 没有域名，无法获取向微信获取 session key"
+    @message = message || '本地的 RAPI 没有域名，无法获取向微信获取 session key'
   end
 end
