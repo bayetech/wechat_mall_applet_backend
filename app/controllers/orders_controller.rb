@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
 
     # use coupon
     if params[:coupon_code].present?
-      coupon = Baye::Coupon.find_by_code params[:coupon_code]
+      coupon = Baye::Coupon.find_by(code: params[:coupon_code])
       if coupon.present? && @payment.can_use_coupon?(coupon)
         @payment.add_coupon(coupon)
         @payment.use_coupon
@@ -91,27 +91,24 @@ class OrdersController < ApplicationController
     # WARN: FOR TEST
     @payment.update(amount: 0.01) if Rails.env.staging?
 
-    #微信支付
+    # 微信支付
     manager = WechatPaymentManager.new
     data = manager.register_for_jsapi(@payment, current_wechat_user)
+    return render status: 403, json: { code: 4005, msg: 'data.prepay_id is blank' } unless data&.prepay_id&.content
+
     wechat_payment = Baye::WechatPayment.new
     wechat_payment.prepay_id = data.prepay_id.content
     wechat_payment.request_data = data.to_s
     @payment.wechat_payment = wechat_payment
 
-    if @payment.save
-      @hash = manager.build_hash_for_jsapi_call(wechat_payment.prepay_id)
-      if @hash.present?
-        @hash.merge!({ signature: manager.build_signature(@hash) })
-        return render json: { hash: @hash }
-      else
-        return render status: 403, json: { code: 4005, msg: 'failed' }
-      end
-    else
+    unless @payment.save
       Rails.logger.debug "无法更新支付:#{@payment.errors.full_messages}."
       return nil
     end
 
+    @hash = manager.build_hash_for_jsapi_call(wechat_payment.prepay_id)
+    @hash[:signature] = manager.build_signature(@hash)
+    return render json: { hash: @hash }
   rescue ActiveRecord::RecordInvalid => e
     return render status: 403, json: { code: 4007, msg: e.message }
   end
@@ -124,5 +121,4 @@ class OrdersController < ApplicationController
       order_items_attributes: [:product_id, :quantity, :external_content]]
     ])
   end
-
 end
