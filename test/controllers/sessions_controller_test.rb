@@ -6,7 +6,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     @customer = customers(:gehao)
     @client_token = @wechat_user.client_token
 
-    @header  = { "Content-Type" => "application/json" }
+    @header = { 'Content-Type' => 'application/json' }
     @head_with_token = @header.merge('Authorization' => @client_token)
 
     SessionsController.class_eval do
@@ -19,7 +19,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test 'token login' do
     post login_sessions_url, params: {}, headers: @head_with_token
-    resp = JSON.load @response.body
+    resp = JSON.parse @response.body
 
     assert_equal(@client_token, resp['token'])
     assert_equal(@customer.name, resp['customer']['name'])
@@ -27,10 +27,10 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'password login success' do
-    post login_sessions_url(mobile: @customer.mobile, password: "1234567"), headers: @header
+    post login_sessions_url(mobile: @customer.mobile, password: '1234567'), headers: @header
 
     assert_response :success
-    resp = JSON.load(@response.body)
+    resp = JSON.parse(@response.body)
 
     # Not equal!
     assert_not_equal(@client_token, resp['token'])
@@ -46,7 +46,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     post login_sessions_url(mobile: @customer.mobile, mobile_code: mobile_code), headers: @header
 
     assert_response :success
-    resp = JSON.load(@response.body)
+    resp = JSON.parse(@response.body)
 
     # Not equal!
     assert_not_equal(@client_token, resp['token'])
@@ -64,7 +64,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     post login_sessions_url(mobile: new_mobile, mobile_code: mobile_code), headers: @header
 
     assert_response :success
-    resp = JSON.load(@response.body)
+    resp = JSON.parse(@response.body)
 
     # Not equal!
     assert_not_equal(@client_token, resp['token'])

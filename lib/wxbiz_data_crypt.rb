@@ -14,7 +14,7 @@ class WXBizDataCrypt
     cipher.key = @session_key
     cipher.iv  = iv
     data = cipher.update(encrypted_data) << cipher.final
-    result = JSON.load(data[0...-data.last.ord])
+    result = JSON.parse(data[0...-data.last.ord])
 
     raise '解密错误' if result['watermark']['appid'] != @app_id
     result
