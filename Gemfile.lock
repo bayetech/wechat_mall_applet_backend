@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: f7284c7acbc35e3ff05fff92ffc7399abfa14874
+  revision: 6123fe63a03557dd06625c9b5706869c4390345e
   branch: master
   specs:
     baye-core (0.0.3)
@@ -257,7 +257,7 @@ GEM
       rack-protection (>= 1.5.0)
       redis (~> 3.2, >= 3.2.1)
     slop (3.6.0)
-    spring (2.0.0)
+    spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -294,7 +294,7 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wx_pay (0.13.0)
+    wx_pay (0.14.1)
       activesupport (>= 3.2)
       rest-client (>= 1.7)
 
