@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 6123fe63a03557dd06625c9b5706869c4390345e
+  revision: 866d3863bd9e86a5be50b86fc127548a8447eb60
   branch: master
   specs:
     baye-core (0.0.3)
@@ -82,7 +82,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
-    ahoy_matey (1.5.3)
+    ahoy_matey (1.5.4)
       addressable
       browser (~> 2.0)
       geocoder
@@ -291,7 +291,7 @@ GEM
     unf_ext (0.0.7.2)
     user_agent_parser (2.3.0)
     uuidtools (2.1.5)
-    websocket-driver (0.6.4)
+    websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     wx_pay (0.14.1)
@@ -331,4 +331,4 @@ DEPENDENCIES
   wx_pay
 
 BUNDLED WITH
-   1.13.7
+   1.14.2
