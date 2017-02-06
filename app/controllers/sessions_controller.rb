@@ -5,7 +5,7 @@ class SessionsController < BaseController
   # 打开应用时就获取用户敏感信息
   # 这里不返回 @token, @customer 的 id 更新也是 nil
   def wechat_user_type
-    update_wechat_user_token
+    update_wechat_user_token unless Rails.env.staging?
     return render json: { wechat_user_type: 'normal' }
 
   rescue DevDomainError, NoAppIdError => e
@@ -121,7 +121,7 @@ class SessionsController < BaseController
     if resp.is_a?(Net::HTTPSuccess) && !resp.body['errcode']
       return resp.body
     else
-      raise("wx 请求没有 Success #{resp&.body}") if Rails.env.production?
+      raise("wx 请求没有 Success #{resp&.body}")
     end
   end
 
