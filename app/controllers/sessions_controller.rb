@@ -121,7 +121,7 @@ class SessionsController < BaseController
     if resp.is_a?(Net::HTTPSuccess) && !resp.body['errcode']
       return resp.body
     else
-      raise("wx 请求没有 Success #{resp&.body}")
+      raise("wx 请求没有 Success #{resp&.body}") if Rails.env.production?
     end
   end
 
