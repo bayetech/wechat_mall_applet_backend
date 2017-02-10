@@ -14,7 +14,7 @@ class ProductsController < BaseController
     @products = Product.includes(:description_of_detail).includes(:images).on_sale.common.is_search.enabled
     @products = case params[:type]
                 when "0"
-                  @products.subscription_goods
+                  @products = @products.subscription_goods
                 when "1"
                   #  4 食品
                   #  6 大米
