@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 6ff816194bd41fdbe8d596cdbb3c5b980c0c7f94
+  revision: e9e93258d6e3dd40ef66fa5ce5843a99b63e0427
   branch: master
   specs:
     baye-core (0.0.3)
@@ -184,7 +184,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.6.0)
+    mini_magick (4.6.1)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_xml (0.6.0)
@@ -269,7 +269,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.11.5)
+    sshkit (1.12.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machines (0.4.0)
@@ -331,4 +331,4 @@ DEPENDENCIES
   wx_pay
 
 BUNDLED WITH
-   1.14.3
+   1.14.4
