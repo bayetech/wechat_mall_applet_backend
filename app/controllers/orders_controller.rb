@@ -59,7 +59,7 @@ class OrdersController < ApplicationController
     orders.each do |order|
       order.product_amount = order.order_items.inject(0) { |sum, i| sum + i.sub_total }
       order.quantity       = order.order_items.inject(0) { |sum, i| sum + i.quantity }
-      order.weight         = order.order_items.inject(0) { |sum, i| sum + i.product_weight.to_f }
+      order.weight         = order.order_items.inject(0) { |sum, i| sum + i.product_weight }
       order.amount         = order.product_amount
       order.save!
     end
