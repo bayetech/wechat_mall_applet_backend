@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: abc149d6f5aaafc34f7015d1025b3e729373e94d
+  revision: 7676586624767272da193261bbf9152e379d6187
   branch: master
   specs:
     baye-core (0.0.3)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 23094f4d4275df6d31985264e39626c28050d2c7
+  revision: 8f752237428e929b3ab7e3bd2867b8a053ccf4ab
   branch: master
   specs:
     wechat (0.8.4)
@@ -191,7 +191,7 @@ GEM
     mysql2 (0.4.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.0.1)
+    net-ssh (4.1.0)
     netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
