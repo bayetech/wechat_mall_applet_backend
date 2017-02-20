@@ -20,7 +20,8 @@ class ProductQrCodesController < BaseController
   end
 
   def render_pay_qr_image
-    key = 'pay_' + SecureRandom.hex(16)
+    key = 'pay_' + SecureRandom.hex(8)
+    # Cart 是 tabBar 可能不能带参数了
     qr_image_url = "pages/cart/cart?ticket=#{key}"
     temp_info = params.to_json
 
