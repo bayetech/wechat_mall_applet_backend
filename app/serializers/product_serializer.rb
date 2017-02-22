@@ -17,6 +17,7 @@ class ProductSerializer < ActiveModel::Serializer
   attribute :desc do
     html = object.description_of_detail.content
     html.scan(/<img .+?>/).map do |img|
+      next unless img =~ /alt="Image"/
       width  = img.match(/width="(\d+)"/)[1]
       height = img.match(/height="(\d+)"/)[1]
       src    = img.match(/src="(.+?)"/)[1]
