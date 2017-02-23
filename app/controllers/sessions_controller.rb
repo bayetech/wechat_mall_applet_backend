@@ -82,14 +82,18 @@ class SessionsController < BaseController
     body = cached_wx_session_key(params[:code])
     sensitive_data = decrypt(body['session_key'])
 
-    wechat_user = find_exist_wechat_user(sensitive_data) || WechatUser.new
+    wechat_user = find_exist_wechat_user(sensitive_data, body) || WechatUser.new
     wechat_user.update_token(body, @customer, @token, params[:code])
     wechat_user.update_info(sensitive_data)
     wechat_user
   end
 
-  def find_exist_wechat_user(data)
-    WechatUser.find_by(union_open_id: data['unionId'])
+  def find_exist_wechat_user(data, body)
+    if WechatUser.where(union_open_id: data['unionId']).count > 1
+      WechatUser.find_by(union_open_id: data['unionId'], open_id: body['openid'])
+    else
+      WechatUser.find_by(union_open_id: data['unionId'])
+    end
   end
 
   def token_valid?
