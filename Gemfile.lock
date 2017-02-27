@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 351b1bd765d8b0e343b6c8e8b21acb333dbdcc3f
+  revision: b85217a0634a55fcc8da8c1c71479dfec6cc36d0
   branch: master
   specs:
     baye-core (0.0.3)
@@ -137,9 +137,9 @@ GEM
     case_transform (0.2)
       activesupport
     coderay (1.1.1)
-    concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
-    domain_name (0.5.20161129)
+    domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     errbase (0.0.3)
     erubis (2.7.0)
