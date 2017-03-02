@@ -1,9 +1,9 @@
 source 'https://gems.ruby-china.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0', '< 5.2'
+gem 'rails', '>= 5.0.2', '< 5.2'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.5'
+gem 'mysql2', '>= 0.4.5', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
@@ -15,7 +15,7 @@ gem 'baye-core', git: 'git@source.bayekeji.com:backend/baye-core.git', branch: :
 # Build JSON APIs with ease. Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.10.2'
 
-gem 'ahoy_matey', '~> 1.5.3'
+gem 'ahoy_matey', '~> 1.5.4'
 
 gem 'cl2009', git: 'git@source.bayekeji.com:backend/cl2009.git', tag: 'v0.2.1'
 
@@ -23,7 +23,7 @@ gem 'sidekiq'
 # Generates swagger-ui json files for Rails APIs with a simple DSL
 gem 'swagger-docs'
 
-gem 'redis', '~> 3.3.1'
+gem 'redis', '~> 3.3.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.11'
 gem 'wx_pay'
@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
