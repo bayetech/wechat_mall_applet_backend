@@ -1,9 +1,9 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 52a64ed3be6f6ba7d157cdc5d15d221741fb4d32
+  revision: af4d23cc8bf046c3973f96a58024fc97c646ee4d
   branch: master
   specs:
-    baye-core (0.0.3)
+    baye-core (0.1.0)
       activerecord (>= 5.0.0)
       ahoy_matey
       base32
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 8f752237428e929b3ab7e3bd2867b8a053ccf4ab
+  revision: a0134505bdddc715a384e4296778978eb57bbc64
   branch: master
   specs:
     wechat (0.8.4)
@@ -115,7 +115,7 @@ GEM
       capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-harrow (0.5.3)
-    capistrano-rails (1.2.2)
+    capistrano-rails (1.2.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-rvm (0.1.2)
@@ -146,7 +146,7 @@ GEM
     exception_notification (4.2.1)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
-    ffi (1.9.17)
+    ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
     geocoder (1.4.3)
@@ -333,4 +333,4 @@ DEPENDENCIES
   wx_pay
 
 BUNDLED WITH
-   1.14.5
+   1.14.6
