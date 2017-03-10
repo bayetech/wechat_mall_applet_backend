@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 5d3ee518667e4269389c1d327ed7aaaf4e1d1655
+  revision: 575383332fe1604f055060b297e34eae69bbcaae
   branch: master
   specs:
     baye-core (0.1.0)
@@ -236,7 +236,7 @@ GEM
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
-    puma (3.7.1)
+    puma (3.8.0)
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
