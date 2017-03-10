@@ -30,7 +30,7 @@ server 'rapi-staging.bayekeji.com', user: 'root', roles: %w(app web)
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 set :rails_env, 'staging'
-set :branch, 'staging'
+set :branch, 'master'
 
 # Custom SSH Options
 # ==================
