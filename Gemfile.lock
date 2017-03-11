@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 575383332fe1604f055060b297e34eae69bbcaae
+  revision: b0c9291e68a7f78f1689f150a826d0e34de3fcb0
   branch: master
   specs:
     baye-core (0.1.0)
@@ -108,16 +108,14 @@ GEM
     browser (2.3.0)
     builder (3.2.3)
     byebug (9.0.6)
-    capistrano (3.7.2)
+    capistrano (3.8.0)
       airbrussh (>= 1.0.0)
-      capistrano-harrow
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
     capistrano-bundler (1.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
-    capistrano-harrow (0.5.3)
     capistrano-rails (1.2.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -236,7 +234,7 @@ GEM
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
-    puma (3.8.0)
+    puma (3.8.1)
     rack (2.0.1)
     rack-attack (5.0.1)
       rack

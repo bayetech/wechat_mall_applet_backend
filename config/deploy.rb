@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '~> 3.7.0'
+lock '~> 3.8.0'
 
 set :application, 'landlord_rapi'
 set :repo_url, 'git@source.bayekeji.com:backend/landlord_rapi.git'
