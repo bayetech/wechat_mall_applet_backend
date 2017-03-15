@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: b49269f738a376da9089dd7b7fc4793b2739e27d
+  revision: 8e584cb67e15905b24bc93ef15020f1e74f19164
   branch: master
   specs:
     baye-core (0.1.0)
@@ -29,10 +29,10 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 3c9547633698bcb53f087b7c49e39826645e5726
+  revision: 088a8aab725ae402a5f3d457ed159fcebb0e6edd
   branch: master
   specs:
-    wechat (0.8.4)
+    wechat (0.8.5)
       activesupport (>= 3.2, < 5.1.x)
       http (>= 1.0.4, < 3)
       nokogiri (>= 1.6.0)
@@ -234,7 +234,7 @@ GEM
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
-    puma (3.8.1)
+    puma (3.8.2)
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
@@ -323,7 +323,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    wx_pay (0.14.1)
+    wx_pay (0.14.2)
       activesupport (>= 3.2)
       rest-client (>= 1.7)
 
