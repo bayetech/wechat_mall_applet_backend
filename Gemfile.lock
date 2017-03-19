@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: fbb6271b92b721e2907ea2e331cefe2002325bdd
+  revision: 88f02cba3792d12fe00578e2cc5020b0812ee7e6
   branch: master
   specs:
     baye-core (0.1.0)
@@ -29,11 +29,11 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 088a8aab725ae402a5f3d457ed159fcebb0e6edd
+  revision: 24b48ea79685359e8519a76583b4dd5b0f95fa2f
   branch: master
   specs:
-    wechat (0.8.5)
-      activesupport (>= 3.2, < 5.1.x)
+    wechat (0.8.6)
+      activesupport (>= 3.2, <= 5.2)
       http (>= 1.0.4, < 3)
       nokogiri (>= 1.6.0)
       thor
@@ -280,7 +280,7 @@ GEM
     ruby_dep (1.5.0)
     safely_block (0.2.0)
       errbase
-    sidekiq (4.2.9)
+    sidekiq (4.2.10)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
