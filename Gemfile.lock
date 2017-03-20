@@ -222,7 +222,7 @@ GEM
     net-ssh (4.1.0)
     netrc (0.11.0)
     nio4r (2.0.0)
-    nokogiri (1.7.0.1)
+    nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     paper_trail (6.0.2)
       activerecord (>= 4.0, < 5.2)
