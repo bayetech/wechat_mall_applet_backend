@@ -125,7 +125,7 @@ GEM
     capistrano-sidekiq (0.10.0)
       capistrano
       sidekiq (>= 3.4)
-    capistrano3-puma (3.0.1)
+    capistrano3-puma (3.0.2)
       capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 3.4)
