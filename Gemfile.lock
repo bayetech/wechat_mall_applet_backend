@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: b1e710c975a9069ed03c6912c522dbd80f9796bb
+  revision: cdf5b76f61ee9935e4f1c230ba03738cceaaad2b
   branch: master
   specs:
     baye-core (0.1.0)
@@ -125,7 +125,7 @@ GEM
     capistrano-sidekiq (0.10.0)
       capistrano
       sidekiq (>= 3.4)
-    capistrano3-puma (3.0.2)
+    capistrano3-puma (3.0.3)
       capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 3.4)
