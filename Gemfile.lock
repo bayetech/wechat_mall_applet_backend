@@ -125,7 +125,7 @@ GEM
     capistrano-sidekiq (0.10.0)
       capistrano
       sidekiq (>= 3.4)
-    capistrano3-puma (3.0.3)
+    capistrano3-puma (3.1.0)
       capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 3.4)
@@ -299,7 +299,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.12.0)
+    sshkit (1.13.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machines (0.4.0)
