@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: cdf5b76f61ee9935e4f1c230ba03738cceaaad2b
+  revision: 21fecf218ec34e6d77db815aa68452a6125923dd
   branch: master
   specs:
     baye-core (0.1.0)
@@ -13,7 +13,7 @@ GIT
       elasticsearch-rails
       kakurenbo-puti (~> 0.5.0)
       kaminari
-      mini_magick (~> 4.6.0)
+      mini_magick (~> 4.7.0)
       paper_trail (~> 6.0.2)
       sidekiq (~> 4.2.8)
       state_machines-activemodel (~> 0.4.0)
@@ -211,7 +211,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.6.1)
+    mini_magick (4.7.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
