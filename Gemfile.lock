@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 24b48ea79685359e8519a76583b4dd5b0f95fa2f
+  revision: 7f166b5fcf69640ba9274c0deb27c8c4e76bd369
   branch: master
   specs:
     wechat (0.8.6)
@@ -83,7 +83,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.0)
+    addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     ahoy_matey (1.5.5)
       addressable
