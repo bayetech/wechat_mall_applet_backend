@@ -1,10 +1,10 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 9db1aff49311f4679c3c75de19fa39123f3e3b70
+  revision: 777d1a4ea9afdfec1e05495d2d247204bc6cbb92
   branch: master
   specs:
     baye-core (0.1.0)
-      activerecord (>= 5.0.0)
+      activerecord (>= 5.0.2)
       ahoy_matey
       base32
       bcrypt (~> 3.1.11)
@@ -14,8 +14,8 @@ GIT
       kakurenbo-puti (~> 0.5.0)
       kaminari
       mini_magick (~> 4.7.0)
-      paper_trail (~> 6.0.2)
-      sidekiq (~> 4.2.8)
+      paper_trail (~> 7.0.1)
+      sidekiq (~> 4.2.10)
       state_machines-activemodel (~> 0.4.0)
       state_machines-activerecord (~> 0.4.0)
 
@@ -225,7 +225,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
-    paper_trail (6.0.2)
+    paper_trail (7.0.1)
       activerecord (>= 4.0, < 5.2)
       request_store (~> 1.1)
     pry (0.10.4)
