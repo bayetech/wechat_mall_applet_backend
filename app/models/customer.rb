@@ -18,7 +18,6 @@ class Customer < ApplicationRecord
 
   has_many :inventory_changes, class_name: Baye::CustomerInventoryChange
   has_many :inventories, class_name: Baye::CustomerInventory
-  has_many :assets, class_name: Baye::CustomerAsset
   has_many :orders
   has_many :payments, class_name: Baye::Payment
   has_many :wechat_users
