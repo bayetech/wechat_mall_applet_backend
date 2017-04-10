@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 21fecf218ec34e6d77db815aa68452a6125923dd
+  revision: 31ddcd2ec3d7ca30ddcc167b8a04d88d491f0dc8
   branch: master
   specs:
     baye-core (0.1.0)
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: 7f166b5fcf69640ba9274c0deb27c8c4e76bd369
+  revision: 24130730686f6cc173dde9999ca6b5ed6bff7117
   branch: master
   specs:
     wechat (0.8.6)
@@ -143,17 +143,17 @@ GEM
     connection_pool (2.2.1)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
-    elasticsearch (5.0.3)
-      elasticsearch-api (= 5.0.3)
-      elasticsearch-transport (= 5.0.3)
-    elasticsearch-api (5.0.3)
+    elasticsearch (5.0.4)
+      elasticsearch-api (= 5.0.4)
+      elasticsearch-transport (= 5.0.4)
+    elasticsearch-api (5.0.4)
       multi_json
-    elasticsearch-model (0.1.9)
+    elasticsearch-model (5.0.0)
       activesupport (> 3)
-      elasticsearch (> 0.4)
+      elasticsearch (> 1)
       hashie
-    elasticsearch-rails (0.1.9)
-    elasticsearch-transport (5.0.3)
+    elasticsearch-rails (5.0.0)
+    elasticsearch-transport (5.0.4)
       faraday
       multi_json
     errbase (0.0.3)
