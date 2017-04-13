@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 777d1a4ea9afdfec1e05495d2d247204bc6cbb92
+  revision: 0edceefeac6726d13c6168036a3daf9c3dd2081d
   branch: master
   specs:
     baye-core (0.1.0)
@@ -318,7 +318,7 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2)
+    unf_ext (0.0.7.3)
     user_agent_parser (2.3.0)
     uuidtools (2.1.5)
     websocket-driver (0.6.5)
