@@ -96,7 +96,7 @@ GEM
       safely_block (>= 0.1.1)
       user_agent_parser
       uuidtools
-    airbrussh (1.1.2)
+    airbrussh (1.2.0)
       sshkit (>= 1.6.1, != 1.7.0)
     aliyun-oss-sdk (0.1.8)
       addressable
