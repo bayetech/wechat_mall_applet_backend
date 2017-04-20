@@ -318,7 +318,7 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.3)
+    unf_ext (0.0.7.4)
     user_agent_parser (2.3.0)
     uuidtools (2.1.5)
     websocket-driver (0.6.5)
