@@ -108,7 +108,7 @@ GEM
     browser (2.3.0)
     builder (3.2.3)
     byebug (9.0.6)
-    capistrano (3.8.0)
+    capistrano (3.8.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -161,7 +161,7 @@ GEM
     exception_notification (4.2.1)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
-    faraday (0.12.0.1)
+    faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     figaro (1.1.1)
