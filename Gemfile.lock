@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: f0946371748c95643766450ee68a9174e82bfc63
+  revision: cf33e65a100dbf46d352918627ad85553c4bee5c
   branch: master
   specs:
     wechat (0.8.6)
