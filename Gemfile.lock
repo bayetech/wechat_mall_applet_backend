@@ -29,10 +29,10 @@ GIT
 
 GIT
   remote: git@source.bayekeji.com:backend/wechat.git
-  revision: cf33e65a100dbf46d352918627ad85553c4bee5c
+  revision: f2a7a691cd50b0e18662435abb6d67f6896ae100
   branch: master
   specs:
-    wechat (0.8.6)
+    wechat (0.8.7)
       activesupport (>= 3.2, <= 5.2)
       http (>= 1.0.4, < 3)
       nokogiri (>= 1.6.0)
@@ -274,7 +274,7 @@ GEM
     redis (3.3.3)
     referer-parser (0.3.0)
     request_store (1.3.2)
-    rest-client (2.0.1)
+    rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
