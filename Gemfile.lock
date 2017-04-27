@@ -1,6 +1,6 @@
 GIT
   remote: git@source.bayekeji.com:backend/baye-core.git
-  revision: 0edceefeac6726d13c6168036a3daf9c3dd2081d
+  revision: 3e09c011a36bd153f904d0a99f4f8e8fb2fe3f2d
   branch: master
   specs:
     baye-core (0.1.0)
