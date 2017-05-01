@@ -15,7 +15,7 @@ gem 'baye-core', git: 'git@source.bayekeji.com:backend/baye-core.git', branch: :
 # Build JSON APIs with ease. Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.10.2'
 
-gem 'ahoy_matey', '~> 1.5.4'
+gem 'ahoy_matey'
 
 gem 'cl2009', git: 'git@source.bayekeji.com:backend/cl2009.git', tag: 'v0.2.1'
 
