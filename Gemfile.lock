@@ -148,11 +148,11 @@ GEM
       elasticsearch-transport (= 5.0.4)
     elasticsearch-api (5.0.4)
       multi_json
-    elasticsearch-model (5.0.0)
+    elasticsearch-model (5.0.1)
       activesupport (> 3)
-      elasticsearch (> 1)
+      elasticsearch (~> 5)
       hashie
-    elasticsearch-rails (5.0.0)
+    elasticsearch-rails (5.0.1)
     elasticsearch-transport (5.0.4)
       faraday
       multi_json
