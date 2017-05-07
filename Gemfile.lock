@@ -1,5 +1,5 @@
 GIT
-  remote: git@source.bayekeji.com:backend/baye-core.git
+  remote: git@git.coding.net:ericguo/landlord_baye-core.git
   revision: 53c2a3a09fd4274075add499d4d683f917b208ea
   branch: master
   specs:

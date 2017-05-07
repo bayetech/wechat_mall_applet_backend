@@ -10,7 +10,7 @@ gem 'puma', '~> 3.0'
 gem 'figaro'
 # Baye core logic, to run locally:
 # $ bundle config --local local.baye-core /Users/guochunzhong/git/landlord/baye-core/
-gem 'baye-core', git: 'git@source.bayekeji.com:backend/baye-core.git', branch: :master
+gem 'baye-core', git: 'git@git.coding.net:ericguo/landlord_baye-core.git', branch: :master
 
 # Build JSON APIs with ease. Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.10.2'
