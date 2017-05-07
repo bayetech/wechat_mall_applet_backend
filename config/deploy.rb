@@ -2,7 +2,7 @@
 lock '~> 3.8.0'
 
 set :application, 'landlord_rapi'
-set :repo_url, 'git@source.bayekeji.com:backend/landlord_rapi.git'
+set :repo_url, 'git@github.com:bayetech/wechat_mall_applet.git'
 
 # puma
 set :puma_role, :app

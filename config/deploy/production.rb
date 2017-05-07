@@ -30,7 +30,7 @@ server 'rapi.bayekeji.com', user: 'root', roles: %w(app web)
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-set :branch, 'production'
+set :branch, 'master'
 set :rails_env, 'production'
 
 # Custom SSH Options
