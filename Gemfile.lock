@@ -1,6 +1,14 @@
 GIT
+  remote: git@git.coding.net:ericguo/cl2009.git
+  revision: 2067b984d69b8e72f3034eb25ef95a5dd28a8e50
+  branch: master
+  specs:
+    cl2009 (0.2.0)
+      redis (~> 3.2)
+
+GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 53c2a3a09fd4274075add499d4d683f917b208ea
+  revision: 83347139a36535374adb081382636a06cf4f7fe9
   branch: master
   specs:
     baye-core (0.1.0)
@@ -20,15 +28,7 @@ GIT
       state_machines-activerecord (~> 0.4.0)
 
 GIT
-  remote: git@source.bayekeji.com:backend/cl2009.git
-  revision: 917b05fc9ba7680334be579da625ac44208d0cbd
-  tag: v0.2.1
-  specs:
-    cl2009 (0.2.0)
-      redis (~> 3.2)
-
-GIT
-  remote: git@source.bayekeji.com:backend/wechat.git
+  remote: git@github.com:Eric-Guo/wechat.git
   revision: 8d793958fdf1f67f59f82435a9e7d4a90c79812d
   branch: master
   specs:
@@ -240,7 +240,7 @@ GEM
     rack-attack (5.0.1)
       rack
     rack-cors (0.4.1)
-    rack-protection (1.5.3)
+    rack-protection (2.0.0)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -319,7 +319,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
-    user_agent_parser (2.3.0)
+    user_agent_parser (2.3.1)
     uuidtools (2.1.5)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)

@@ -17,7 +17,8 @@ gem 'active_model_serializers', '~> 0.10.2'
 
 gem 'ahoy_matey'
 
-gem 'cl2009', git: 'git@source.bayekeji.com:backend/cl2009.git', tag: 'v0.2.1'
+# $ bundle config --local local.cl2009 /Users/guochunzhong/git/landlord/cl2009/
+gem 'cl2009', git: 'git@git.coding.net:ericguo/cl2009.git', branch: :master
 
 gem 'sidekiq'
 # Generates swagger-ui json files for Rails APIs with a simple DSL
@@ -29,7 +30,7 @@ gem 'bcrypt', '~> 3.1.11'
 gem 'wx_pay'
 
 # $ bundle config --local local.wechat /Users/guochunzhong/git/oss/wechat
-gem 'wechat', git: 'git@source.bayekeji.com:backend/wechat.git', branch: :master
+gem 'wechat', git: 'git@github.com:Eric-Guo/wechat.git', branch: :master
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors', require: 'rack/cors'
