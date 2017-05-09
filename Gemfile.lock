@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@github.com:Eric-Guo/wechat.git
-  revision: 8d793958fdf1f67f59f82435a9e7d4a90c79812d
+  revision: a5221d1cf8bb3dfd2d0bcaf681ed208550a2af06
   branch: master
   specs:
     wechat (0.8.7)
@@ -236,7 +236,7 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
     puma (3.8.2)
-    rack (2.0.1)
+    rack (2.0.2)
     rack-attack (5.0.1)
       rack
     rack-cors (0.4.1)
