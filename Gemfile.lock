@@ -236,7 +236,7 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
     puma (3.8.2)
-    rack (2.0.2)
+    rack (2.0.3)
     rack-attack (5.0.1)
       rack
     rack-cors (0.4.1)
