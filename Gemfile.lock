@@ -183,7 +183,7 @@ GEM
     http_parser.rb (0.6.0)
     httparty (0.15.5)
       multi_xml (>= 0.5.2)
-    i18n (0.8.1)
+    i18n (0.8.3)
     jsonapi-renderer (0.1.2)
     kakurenbo-puti (0.5.0)
       activerecord (>= 4.1.0)
