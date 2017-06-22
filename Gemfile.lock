@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 5c3c995fb7b1baaa59c7c5014dbd0406bc411760
+  revision: 9d858aceb0237481a5ff374c40fff20c433187a5
   branch: master
   specs:
     baye-core (0.1.0)
@@ -24,8 +24,8 @@ GIT
       mini_magick (~> 4.7.0)
       paper_trail (~> 7.0.1)
       sidekiq (~> 5.0.2)
-      state_machines-activemodel (~> 0.4.0)
-      state_machines-activerecord (~> 0.4.0)
+      state_machines-activemodel (~> 0.5.0)
+      state_machines-activerecord (~> 0.5.0)
 
 GIT
   remote: git@github.com:Eric-Guo/wechat.git
@@ -211,7 +211,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.7.1)
+    mini_magick (4.7.2)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
     multi_json (1.12.1)
@@ -302,13 +302,13 @@ GEM
     sshkit (1.13.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machines (0.4.0)
-    state_machines-activemodel (0.4.1)
+    state_machines (0.5.0)
+    state_machines-activemodel (0.5.0)
       activemodel (>= 4.1, < 5.2)
-      state_machines (>= 0.4.0)
-    state_machines-activerecord (0.4.1)
+      state_machines (>= 0.5.0)
+    state_machines-activerecord (0.5.0)
       activerecord (>= 4.1, < 5.2)
-      state_machines-activemodel (>= 0.3.0)
+      state_machines-activemodel (>= 0.5.0)
     swagger-docs (0.2.9)
       activesupport (>= 3)
       rails (>= 3)
