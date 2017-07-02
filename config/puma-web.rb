@@ -1,4 +1,4 @@
-app_root = '/var/www/landlord_rapi/current'
+app_root = '/var/www/rapi/current'
 pidfile "#{app_root}/tmp/pids/puma.pid"
 state_path "#{app_root}/tmp/pids/puma.state"
 stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
