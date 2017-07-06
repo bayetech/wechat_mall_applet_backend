@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 464bff7a3081823f303f878b646f9b8933b4beb6
+  revision: 2d5803a544d287072ae58e297fd07b6b10cdccf4
   branch: master
   specs:
     baye-core (0.1.0)
@@ -21,7 +21,7 @@ GIT
       elasticsearch-rails
       kakurenbo-puti (~> 0.5.0)
       kaminari
-      mini_magick (~> 4.7.0)
+      mini_magick (~> 4.8.0)
       paper_trail (~> 7.0.1)
       sidekiq (~> 5.0.2)
       state_machines-activemodel (~> 0.5.0)
@@ -211,7 +211,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.7.2)
+    mini_magick (4.8.0)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
     multi_json (1.12.1)
