@@ -239,7 +239,7 @@ GEM
     rack (2.0.3)
     rack-attack (5.0.1)
       rack
-    rack-cors (1.0.0)
+    rack-cors (1.0.1)
     rack-protection (2.0.0)
       rack
     rack-test (0.6.3)
@@ -319,7 +319,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
-    user_agent_parser (2.3.1)
+    user_agent_parser (2.3.2)
     uuidtools (2.1.5)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
@@ -361,4 +361,4 @@ DEPENDENCIES
   wx_pay
 
 BUNDLED WITH
-   1.15.1
+   1.15.2
