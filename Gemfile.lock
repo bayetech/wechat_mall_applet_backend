@@ -158,7 +158,7 @@ GEM
       multi_json
     errbase (0.0.3)
     erubis (2.7.0)
-    exception_notification (4.2.1)
+    exception_notification (4.2.2)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
     faraday (0.12.2)
