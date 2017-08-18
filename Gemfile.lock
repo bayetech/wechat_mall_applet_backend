@@ -235,7 +235,7 @@ GEM
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
-    puma (3.9.1)
+    puma (3.10.0)
     rack (2.0.3)
     rack-attack (5.0.1)
       rack
