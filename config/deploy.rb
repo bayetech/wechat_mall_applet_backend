@@ -12,7 +12,7 @@ set :puma_config_file, 'config/puma-web.rb'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/data/www/rapi'
 
 # Default value for :scm is :git
 # set :scm, :git
