@@ -44,7 +44,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
 
-  gem 'pry-nav'
+  gem 'pry-byebug'
 end
 
 group :development do
