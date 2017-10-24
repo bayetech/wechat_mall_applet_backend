@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 621a1b07a9387e30c479e70c3d9914f20b0711cb
+  revision: b0466074856b4270d3785d6bbf022506ecfe91c5
   branch: master
   specs:
     baye-core (0.1.0)
@@ -108,7 +108,7 @@ GEM
     browser (2.5.1)
     builder (3.2.3)
     byebug (9.1.0)
-    capistrano (3.9.1)
+    capistrano (3.10.0)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -242,7 +242,7 @@ GEM
     rack (2.0.3)
     rack-attack (5.0.1)
       rack
-    rack-cors (1.0.1)
+    rack-cors (1.0.2)
     rack-protection (2.0.0)
       rack
     rack-test (0.6.3)
