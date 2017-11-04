@@ -302,7 +302,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.14.0)
+    sshkit (1.15.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machines (0.5.0)
@@ -364,4 +364,4 @@ DEPENDENCIES
   wx_pay
 
 BUNDLED WITH
-   1.16.0
+   1.15.4
