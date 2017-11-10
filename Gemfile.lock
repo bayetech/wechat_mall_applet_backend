@@ -1,6 +1,6 @@
 GIT
   remote: git@git.coding.net:ericguo/cl2009.git
-  revision: 2067b984d69b8e72f3034eb25ef95a5dd28a8e50
+  revision: fd1f3b75d49d257674d3ca23ece325cae6713d87
   branch: master
   specs:
     cl2009 (0.2.0)
@@ -238,7 +238,7 @@ GEM
     pry-byebug (3.5.0)
       byebug (~> 9.1)
       pry (~> 0.10)
-    public_suffix (3.0.0)
+    public_suffix (3.0.1)
     puma (3.10.0)
     rack (2.0.3)
     rack-attack (5.0.1)
