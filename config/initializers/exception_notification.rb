@@ -19,8 +19,7 @@ if Rails.env.production? || Rails.env.staging?
     config.add_notifier :email,
                         email_prefix: "[RAPI #{Rails.env}]",
                         sender_address: %("Rails Exception Notifier" <no-reply@bayekeji.com>),
-                        exception_recipients: %w(guochunzhong@bayekeji.com gengdejie@bayekeji.com houdelin@bayekeji.com
-                                                 yesijie@bayekeji.com gehao@bayekeji.com)
+                        exception_recipients: %w(guochunzhong@bayekeji.com)
 
     # Campfire notifier sends notifications to your Campfire room. Requires 'tinder' gem.
     # config.add_notifier :campfire, {
