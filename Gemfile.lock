@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: fe83a4006ce7e2f11d17a051c4f18f0627a240a5
+  revision: 9b35e959c3af8957f4628e18923689b1d8365392
   branch: master
   specs:
     baye-core (0.1.0)
@@ -22,7 +22,7 @@ GIT
       kakurenbo-puti (~> 0.5.0)
       kaminari
       mini_magick (~> 4.8.0)
-      paper_trail (~> 8.0.1)
+      paper_trail (~> 8.1.0)
       sidekiq (~> 5.0.2)
       state_machines-activemodel (~> 0.5.0)
       state_machines-activerecord (~> 0.5.0)
@@ -229,7 +229,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    paper_trail (8.0.1)
+    paper_trail (8.1.0)
       activerecord (>= 4.2, < 5.2)
       request_store (~> 1.1)
     pry (0.11.3)
