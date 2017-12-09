@@ -108,7 +108,7 @@ GEM
     browser (2.5.2)
     builder (3.2.3)
     byebug (9.1.0)
-    capistrano (3.10.0)
+    capistrano (3.10.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
