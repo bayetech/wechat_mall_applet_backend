@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 3c27c29870370c61b2968ae0c0148152ade6e540
+  revision: d2c672b9dead2e7da1ff9f062d2957e9d4408a1d
   branch: master
   specs:
     baye-core (0.1.0)
@@ -172,7 +172,7 @@ GEM
       activesupport (>= 4.2.0)
     gyoku (1.3.1)
       builder (>= 2.1.2)
-    hashie (3.5.6)
+    hashie (3.5.7)
     http (3.0.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -229,7 +229,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    paper_trail (8.1.1)
+    paper_trail (8.1.2)
       activerecord (>= 4.2, < 5.2)
       request_store (~> 1.1)
     pry (0.11.3)
