@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: dc8d731072be2cca1e346b72479fa95338971326
+  revision: 4343caf5ae8f48bb366d7a1bd631957b09504ae2
   branch: master
   specs:
     baye-core (0.1.0)
@@ -226,7 +226,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     netrc (0.11.0)
-    nio4r (2.1.0)
+    nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     paper_trail (8.1.2)
