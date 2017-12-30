@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 4343caf5ae8f48bb366d7a1bd631957b09504ae2
+  revision: cd651a6a352d064fb592e45b4f0bb46ac2d1038e
   branch: master
   specs:
     baye-core (0.1.0)
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@github.com:Eric-Guo/wechat.git
-  revision: f8cf276c16c1df5741932144980cf07f063b503c
+  revision: 70c0a0b548a821a0c396714855755f641aebcdc5
   branch: master
   specs:
     wechat (0.8.12)
