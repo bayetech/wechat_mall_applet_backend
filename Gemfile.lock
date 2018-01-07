@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: cd651a6a352d064fb592e45b4f0bb46ac2d1038e
+  revision: 668f071f0b3aa4359efbef101d7827a0eba31714
   branch: master
   specs:
     baye-core (0.1.0)
