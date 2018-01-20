@@ -162,7 +162,7 @@ GEM
     exception_notification (4.2.2)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
-    faraday (0.13.1)
+    faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     figaro (1.1.1)
@@ -239,7 +239,7 @@ GEM
       byebug (~> 9.1)
       pry (~> 0.10)
     public_suffix (3.0.1)
-    puma (3.11.0)
+    puma (3.11.2)
     rack (2.0.3)
     rack-attack (5.0.1)
       rack
