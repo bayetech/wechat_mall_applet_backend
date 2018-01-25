@@ -122,7 +122,7 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-sidekiq (0.20.0)
+    capistrano-sidekiq (1.0.0)
       capistrano (>= 3.9.0)
       sidekiq (>= 3.4)
     capistrano3-puma (3.1.1)
