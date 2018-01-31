@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: b576b9b9de44d46a99f36de046d1d5ec8b1106e1
+  revision: 6904b214294d0e9a5d9822b78f5babe1741483fb
   branch: master
   specs:
     baye-core (0.1.0)
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@github.com:Eric-Guo/wechat.git
-  revision: 70c0a0b548a821a0c396714855755f641aebcdc5
+  revision: 53f7f35792d2c499589f860af12a924cc246949b
   branch: master
   specs:
     wechat (0.8.12)
@@ -227,7 +227,7 @@ GEM
     net-ssh (4.2.0)
     netrc (0.11.0)
     nio4r (2.2.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     paper_trail (8.1.2)
       activerecord (>= 4.2, < 5.2)
