@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 6904b214294d0e9a5d9822b78f5babe1741483fb
+  revision: 1504b6bda344d6f24aedad51d913ee326523b300
   branch: master
   specs:
     baye-core (0.1.0)
@@ -85,7 +85,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    ahoy_matey (1.6.0)
+    ahoy_matey (1.6.1)
       addressable
       browser (~> 2.0)
       geocoder
@@ -240,7 +240,7 @@ GEM
       pry (~> 0.10)
     public_suffix (3.0.1)
     puma (3.11.2)
-    rack (2.0.3)
+    rack (2.0.4)
     rack-attack (5.0.1)
       rack
     rack-cors (1.0.2)
