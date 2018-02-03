@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@git.coding.net:ericguo/landlord_baye-core.git
-  revision: 1504b6bda344d6f24aedad51d913ee326523b300
+  revision: ef3a87f5eeabb7a835f1a33e0f66595fe00e2a15
   branch: master
   specs:
     baye-core (0.1.0)
@@ -23,7 +23,7 @@ GIT
       kaminari
       mini_magick (~> 4.8.0)
       paper_trail (~> 8.1.0)
-      sidekiq (~> 5.0.2)
+      sidekiq (~> 5.1.0)
       state_machines-activemodel (~> 0.5.0)
       state_machines-activerecord (~> 0.5.0)
 
@@ -286,7 +286,7 @@ GEM
     ruby_dep (1.5.0)
     safely_block (0.2.0)
       errbase
-    sidekiq (5.0.5)
+    sidekiq (5.1.0)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
