@@ -24,7 +24,7 @@ gem 'sidekiq'
 # Generates swagger-ui json files for Rails APIs with a simple DSL
 gem 'swagger-docs'
 
-gem 'redis', '~> 3.3.3'
+gem 'redis'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.11'
 gem 'wx_pay'
