@@ -15,7 +15,7 @@ gem 'baye-core', git: 'git@git.coding.net:ericguo/landlord_baye-core.git', branc
 # Build JSON APIs with ease. Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.10.2'
 
-gem 'ahoy_matey'
+gem 'ahoy_matey', '~> 1.6.1'
 
 # $ bundle config --local local.cl2009 /Users/guochunzhong/git/landlord/cl2009/
 gem 'cl2009', git: 'git@git.coding.net:ericguo/cl2009.git', branch: :master
