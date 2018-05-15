@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git@github.com:Eric-Guo/wechat.git
-  revision: c876fe58ba887864ee881611232a44d1000670e8
+  revision: 33c8f61bee81855efcf3cd6aa38a7e1320ccf657
   branch: master
   specs:
     wechat (0.9.0)
@@ -162,7 +162,7 @@ GEM
     exception_notification (4.2.2)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
-    faraday (0.15.0)
+    faraday (0.15.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
     figaro (1.1.1)
