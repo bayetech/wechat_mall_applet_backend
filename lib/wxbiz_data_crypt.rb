@@ -10,7 +10,7 @@ class WXBizDataCrypt
 
     cipher = OpenSSL::Cipher::AES.new(128, :CBC)
     cipher.decrypt
-    cipher.padding = 0
+
     cipher.key = @session_key
     cipher.iv  = iv
     data = cipher.update(encrypted_data) << cipher.final
